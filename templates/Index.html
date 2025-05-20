@@ -1,0 +1,80 @@
+<script src='https://cdn.jsdelivr.net/npm/htmx.org@latest'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="./manifest.json" />
+
+<body>
+<div id="Primero">
+    <h1 id="Titulo">MARIANO RESPONDE</h1>
+    <h2>Preguntale a Mariano</h2>
+</div>
+
+
+<div style="text-align: center;" id="Segundo">
+    <img id="Mariano" src="/static/pato.png" > 
+</div> 
+
+<div id="subtitulo">
+    <h1>Made In China</h1>
+</div>
+
+<div id="boton" style="text-align: center;">
+    <button type="button" hx-get="/click" hx-target="#respuesta">Preguntar</button>
+</div>
+
+<div id="respuesta">
+
+</div>
+
+<script src="/regist_serviceWorker.js"></script>
+</body>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    }
+    #Primero{
+        background-color: aquamarine;
+    }
+    #Titulo{
+        font-family: Verdana;
+        text-align: center;
+        font-size: 2rem;
+    }
+    h2{
+        font-family: sans-serif;
+        text-align: center;
+    }
+    #Segundo{
+        background-color: rgb(106, 240, 195);
+    }
+    #boton{
+        background-color: aquamarine;
+        width: 100vW;
+        height: 10vh;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+    }
+    #subtitulo{
+        font-family: Verdana;
+        text-align: center;
+        background-color: aquamarine;
+        width: 100vW;
+    
+    }
+    #respuesta{
+        font-family_:Verdana, Geneva, Tahoma, sans-serif;
+        text-align:center;
+        font-size: 2rem;
+        background-color: aquamarine;
+        width: 100vw;
+    }    
+    #mariano{
+    height: 70vh;
+    width: 100vw;
+    }
+
+</style>
