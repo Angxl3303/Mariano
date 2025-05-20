@@ -28,6 +28,5 @@ def respuesta2():
 @app.route('/regist_serviceWorker.js')
 def respuesta3():
     return send_from_directory('templates', 'regist_serviceWorker.js', mimetype='application/javascript')
-
-if __name__ == '__main__':
-    app.run()
+def handler(environ, start_response):
+    return app.wsgi_app(environ, start_response)
