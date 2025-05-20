@@ -7,6 +7,9 @@ app = Flask(__name__)
 def home(): 
     return render_template('index.html')
 
+def handler(request):
+    return app(request.environ, start_response=lambda *args: None)
+    
 @app.route('/click')
 def respuesta():
     rango = range(1,50)
