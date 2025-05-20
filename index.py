@@ -6,7 +6,8 @@ app = Flask(__name__)
 @app.route('/')
 def home(): 
     return render_template('index.html')
-
+def handler(environ, start_response):
+    return app.wsgi_app(environ, start_response)
     
 @app.route('/click')
 def respuesta():
@@ -28,5 +29,4 @@ def respuesta2():
 @app.route('/regist_serviceWorker.js')
 def respuesta3():
     return send_from_directory('templates', 'regist_serviceWorker.js', mimetype='application/javascript')
-def handler(environ, start_response):
-    return app.wsgi_app(environ, start_response)
+
